@@ -52,14 +52,14 @@ $mail = new PHPMailer(true);
 
 try {
 	//Server settings
-	//$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-	$mail->isSMTP();                                            //Send using SMTP
+	//$mail->SMTPDebug = SMTP::DEBUG_SERVER;                  //Enable verbose debug output
+	$mail->isSMTP();                                          //Send using SMTP
 	$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'TU_EMAIL@gmail.com';                     //SMTP username
-	$mail->Password   = 'TU_CONTRASEÑA';                               //SMTP password
-	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-	$mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+	$mail->SMTPAuth   = true;                                 //Enable SMTP authentication
+	$mail->Username   = 'TU_EMAIL@gmail.com';                 //SMTP username
+	$mail->Password   = 'TU_CONTRASEÑA';                      //SMTP password
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+	$mail->Port       = 587;                                  //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 	//Recipients
 	$mail->setFrom('TU_EMAIL@gmail.com', 'TU_NOMBRE');
@@ -82,7 +82,7 @@ try {
 	$mail->send();
 	  echo '{"status": "200", "mensaje": "OK"}';  // Retorno 200 - OK
 } catch (Exception $e) {
-	Error("El mensaje no ha podido ser enviado");
+	Error("El mensaje no ha podido ser enviado.");
 }
 
 
