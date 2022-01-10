@@ -37,8 +37,8 @@ if(isset($_POST['apellido1']))
 if(isset($_POST['apellido2']))
   	$apellidos = ValDato($_POST['apellido2']);
 
-if(isset($_POST['email']))
-  	$email = ValDato($_POST['email']);
+if(isset($_POST['correo']))
+  	$email = ValDato($_POST['correo']);
 
 if(isset($_POST['telefono']))
   	$telefono = ValDato($_POST['telefono']);
