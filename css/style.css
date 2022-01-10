@@ -8,3 +8,7 @@
 .enviando, .enviado, .error, .otroCorreo{
 	display: none;
 }
+
+body {
+	line-height: 2em;
+}
