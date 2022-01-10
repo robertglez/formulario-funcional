@@ -1,0 +1,10 @@
+.fa-check{
+  color: #4dad4d;
+}
+.fa-ban{
+  color: red;
+}
+
+.enviando, .enviado, .error, .otroCorreo{
+	display: none;
+}
