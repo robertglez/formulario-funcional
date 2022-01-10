@@ -31,8 +31,11 @@ function ValDato($dato){
 if(isset($_POST['nombre']))
   	$nombre = ValDato($_POST['nombre']);
 
-if(isset($_POST['apellidos']))
-  	$apellidos = ValDato($_POST['apellidos']);
+if(isset($_POST['apellido1']))
+  	$apellidos = ValDato($_POST['apellido1']);
+
+if(isset($_POST['apellido2']))
+  	$apellidos = ValDato($_POST['apellido2']);
 
 if(isset($_POST['email']))
   	$email = ValDato($_POST['email']);
@@ -73,7 +76,8 @@ try {
 	$mail->isHTML(true);                                  //Set email format to HTML
 	$mail->Subject = "Formulario de registro de " . $email;
 	$mail->Body    = "Nombre: " . $nombre .
-					 "<br>Apellidos: " . $apellidos .
+					 "<br>Primer apellido: " . $apellido1 .
+					 "<br>Segundo apellido: " . $apellido2 .
 					 "<br>Email: " . $email .
 					 "<br>Teléfono: " . $telefono .
 					 "<br>Comentarios: " . $comentarios;
